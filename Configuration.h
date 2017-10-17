@@ -647,12 +647,12 @@
 //===========================================================================
 //========================= Filament Runout Sensor ==========================
 //===========================================================================
-//#define FILAMENT_RUNOUT_SENSOR // Uncomment for defining a filament runout sensor such as a mechanical or opto endstop to check the existence of filament
+#define FILAMENT_RUNOUT_SENSOR // Uncomment for defining a filament runout sensor such as a mechanical or opto endstop to check the existence of filament
                                  // In RAMPS uses servo pin 2. Can be changed in pins file. For other boards pin definition should be made.
                                  // It is assumed that when logic high = filament available
                                  //                    when logic  low = filament ran out
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
-  const bool FIL_RUNOUT_INVERTING = false; // set to true to invert the logic of the sensor.
+  const bool FIL_RUNOUT_INVERTING = true; // set to true to invert the logic of the sensor.
   #define ENDSTOPPULLUP_FIL_RUNOUT // Uncomment to use internal pullup for filament runout pins if the sensor is defined.
   #define FILAMENT_RUNOUT_SCRIPT "M600"
 #endif

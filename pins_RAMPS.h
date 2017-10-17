@@ -102,7 +102,8 @@
 #define FILWIDTH_PIN        5 // ANALOG NUMBERING
 
 // define digital pin 4 for the filament runout sensor. Use the RAMPS 1.4 digital input 4 on the servos connector
-#define FIL_RUNOUT_PIN      4
+//#define FIL_RUNOUT_PIN      4
+#define FIL_RUNOUT_PIN      11
 
 #define PS_ON_PIN          12
 #define TEMP_0_PIN         13   // ANALOG NUMBERING

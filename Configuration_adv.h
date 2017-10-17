@@ -604,7 +604,7 @@ const unsigned int dropsegments = 5; //everything with less than this number of 
 
 // Add support for experimental filament exchange support M600; requires display
 #if ENABLED(ULTIPANEL)
-  // #define FILAMENT_CHANGE_FEATURE             // Enable filament exchange menu and M600 g-code (used for runout sensor too)
+   #define FILAMENT_CHANGE_FEATURE             // Enable filament exchange menu and M600 g-code (used for runout sensor too)
   #if ENABLED(FILAMENT_CHANGE_FEATURE)
     #define FILAMENT_CHANGE_X_POS 3             // X position of hotend
     #define FILAMENT_CHANGE_Y_POS 3             // Y position of hotend
@@ -614,7 +614,7 @@ const unsigned int dropsegments = 5; //everything with less than this number of 
     #define FILAMENT_CHANGE_RETRACT_LENGTH 2    // Initial retract in mm
                                                 // It is a short retract used immediately after print interrupt before move to filament exchange position
     #define FILAMENT_CHANGE_RETRACT_FEEDRATE 60 // Initial retract feedrate in mm/s
-    #define FILAMENT_CHANGE_UNLOAD_LENGTH 100   // Unload filament length from hotend in mm
+    #define FILAMENT_CHANGE_UNLOAD_LENGTH 50   // Unload filament length from hotend in mm
                                                 // Longer length for bowden printers to unload filament from whole bowden tube,
                                                 // shorter lenght for printers without bowden to unload filament from extruder only,
                                                 // 0 to disable unloading for manual unloading
@@ -623,7 +623,7 @@ const unsigned int dropsegments = 5; //everything with less than this number of 
                                                 // Longer length for bowden printers to fast load filament into whole bowden tube over the hotend,
                                                 // Short or zero length for printers without bowden where loading is not used
     #define FILAMENT_CHANGE_LOAD_FEEDRATE 10    // Load filament feedrate in mm/s - filament loading into the bowden tube can be fast
-    #define FILAMENT_CHANGE_EXTRUDE_LENGTH 50   // Extrude filament length in mm after filament is load over the hotend,
+    #define FILAMENT_CHANGE_EXTRUDE_LENGTH 20   // Extrude filament length in mm after filament is load over the hotend,
                                                 // 0 to disable for manual extrusion
                                                 // Filament can be extruded repeatedly from the filament exchange menu to fill the hotend,
                                                 // or until outcoming filament color is not clear for filament color change
