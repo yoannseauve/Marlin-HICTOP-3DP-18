@@ -584,6 +584,7 @@
 #define Z_PROBE_OFFSET_RANGE_MIN -20
 #define Z_PROBE_OFFSET_RANGE_MAX 20
 
+
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
 // :{0:'Low',1:'High'}
 #define X_ENABLE_ON 0
@@ -620,6 +621,11 @@
 #define INVERT_E3_DIR false
 
 // @section homing
+
+//
+// Move z axis after homing (to prevent hot extruder from damaging the bed)
+//
+#define Z_MOVE_AFTER_HOMING "5" // (in mm) z position after homing (comment to deactivate) (the value must between "")
 
 //#define Z_HOMING_HEIGHT 4  // (in mm) Minimal z height before homing (G28) for Z clearance above the bed, clamps, ...
                              // Be sure you have this distance over your Z_MAX_POS in case.
