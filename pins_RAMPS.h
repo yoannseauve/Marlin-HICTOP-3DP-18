@@ -54,7 +54,9 @@
 
 #define LARGE_FLASH true
 
-#ifdef IS_RAMPS_13
+#if defined(CUSTOM_PINS_BOARD_RAMPS_13)
+  #define  SERVO0_PIN      12
+#elif defined(IS_RAMPS_13)
   #define SERVO0_PIN        7 // RAMPS_13 // Will conflict with BTN_EN2 on LCD_I2C_VIKI
 #else
   #define SERVO0_PIN       11
@@ -70,9 +72,10 @@
 #define Y_MIN_PIN          14
 #define Y_MAX_PIN          15
 #define Z_MIN_PIN          18
-#define Z_MAX_PIN          19
+//#define Z_MAX_PIN          19
 #ifndef Z_MIN_PROBE_PIN
-  #define Z_MIN_PROBE_PIN  32
+  //#define Z_MIN_PROBE_PIN  32
+  #define Z_MIN_PROBE_PIN  19
 #endif
 
 #define X_STEP_PIN         54
@@ -105,7 +108,7 @@
 //#define FIL_RUNOUT_PIN      4
 #define FIL_RUNOUT_PIN      11
 
-#define PS_ON_PIN          12
+//#define PS_ON_PIN          12
 #define TEMP_0_PIN         13   // ANALOG NUMBERING
 #define TEMP_1_PIN         15   // ANALOG NUMBERING
 #define TEMP_BED_PIN       14   // ANALOG NUMBERING
